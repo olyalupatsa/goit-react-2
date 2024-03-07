@@ -11,7 +11,6 @@ const App = () => {
     localStorage.setItem('feedback', JSON.stringify(feedback));
   }, [feedback]);
 
-
   useEffect(() => {
     const handleBeforeUnload = () => {
       localStorage.removeItem('feedback');
