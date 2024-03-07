@@ -13,7 +13,6 @@ const App = () => {
 
 
   useEffect(() => {
-
     const handleBeforeUnload = () => {
       localStorage.removeItem('feedback');
     };
@@ -24,11 +23,9 @@ const App = () => {
       window.removeEventListener('beforeunload', handleBeforeUnload);
     };
   }, []);
-
   const resetFeedback = () => {
     setFeedback({ good: 0, neutral: 0, bad: 0 });
   };
-
   return (
     <div>
       <h1>Sip Happens Café</h1>
