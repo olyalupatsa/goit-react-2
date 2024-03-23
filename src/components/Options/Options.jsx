@@ -1,17 +1,11 @@
-// Options.jsx
 import React from 'react';
 
-const Options = ({ setFeedback, resetFeedback }) => {
-  const handleFeedback = (type) => {
-    setFeedback((prevFeedback) => ({ ...prevFeedback, [type]: prevFeedback[type] + 1 }));
-  };
-
+const Options = ({ onFeedback }) => {
   return (
     <div>
-      <button onClick={() => handleFeedback('good')}>Good</button>
-      <button onClick={() => handleFeedback('neutral')}>Neutral</button>
-      <button onClick={() => handleFeedback('bad')}>Bad</button>
-      <button onClick={resetFeedback}>Reset</button>
+      <button onClick={() => onFeedback('good')}>Good</button>
+      <button onClick={() => onFeedback('neutral')}>Neutral</button>
+      <button onClick={() => onFeedback('bad')}>Bad</button>
     </div>
   );
 };
